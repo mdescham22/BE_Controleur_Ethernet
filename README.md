@@ -5,7 +5,11 @@
 - [ ] Avoir des tests fonctionnels
 - [ ] Possibilité de l’implémenter matériellement
 
-## Schéma Bloc Entrée/Sortie
+## Entrée/Sortie
+
+# Schéma Bloc
+
+# Registres
 
 ##  Emetteur
 
