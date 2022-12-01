@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Ethernet10.srcs/sources_1/new/Recepteur.vhd" \
+"../../../../Ethernet10.srcs/sim_1/new/TestRecepteur.vhd" \
+
+# Do not sort compile order
+nosort
