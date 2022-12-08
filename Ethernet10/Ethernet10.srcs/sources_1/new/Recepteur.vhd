@@ -86,7 +86,7 @@ begin
     elsif (RENABP = '1' and AUX_RCVNGP = '0') then
         RSTARTP <= '1';
         AUX_RCVNGP <= '1';
-        if (RDATAI = SFD) then
+        if (RDATAI = SFD) then  --verification SFD
             cpt_etape <= "000";
         else
             AUX_RCLEANP <= '1';
@@ -98,7 +98,7 @@ begin
         
         if (cpt_wait = "000") then
             
-            if (cpt_etape = "000") then     --verification addr destination
+            if (cpt_etape = "000") then     --verification @ destination
                 RSTARTP <= '0';
                 if (RDATAI = ADDRDEST((7+cpt_trame*8) downto (cpt_trame*8))) then
                     
@@ -117,8 +117,9 @@ begin
                     
                 end if;
             
-            elsif(cpt_etape = "001") then      --envoie addr source
+            elsif(cpt_etape = "001") then      --envoi @source
                 RDATAO <= RDATAI;
+                RBYTEP <= '1';
                 
                 if (cpt_trame = 0) then
                     cpt_etape <= "010";
@@ -130,7 +131,7 @@ begin
                 end if;
            
             
-            elsif(cpt_etape ="010") then
+            elsif(cpt_etape ="010") then        --envoi data
                 
                 if (RDATAI /= EFD) then
                     RDATAO <= RDATAI;

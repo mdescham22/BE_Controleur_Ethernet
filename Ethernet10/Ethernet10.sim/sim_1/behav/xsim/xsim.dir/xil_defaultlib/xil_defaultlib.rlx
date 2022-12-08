@@ -2,7 +2,5 @@
 2018.2
 Jun 14 2018
 20:07:38
-/home/mdescham/Documents/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sim_1/new/TestRecepteur.vhd,1669827740,vhdl,,,,testrecepteur,,,,,,,,
-/home/mdescham/Documents/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sim_1/new/Test_Emetteur.vhd,1669826561,vhdl,,,,testemetteur,,,,,,,,
-/home/mdescham/Documents/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Controleur_Ethernet.vhd,1669821770,vhdl,,,,emetteur,,,,,,,,
-/home/mdescham/Documents/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Recepteur.vhd,1669828031,vhdl,,,,recepteur,,,,,,,,
+/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sim_1/new/TestRecepteur.vhd,1670505851,vhdl,,,,testrecepteur,,,,,,,,
+/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Recepteur.vhd,1670505644,vhdl,,,,recepteur,,,,,,,,
