@@ -94,6 +94,7 @@ stim_proc :process
 begin
     RESET <= '1', '0' after 100 ns, '1' after 200 ns;
     RENABP <= '0', '1' after 500 ns, '0' after 600 ns;
+    
     RDATAI <= "10101011",   --SFD 
     
     X"AB" after 600 ns, X"CD" after 1400 ns, X"EF" after 2200 ns,   --@dest 
