@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/mdescham/Documents/BE_Controleur_Ethernet/Ethernet10/Ethernet10.runs/synth_1'
+HD_PWD='/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Recepteur.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Recepteur.tcl
+EAStep vivado -log Controleur_Ethernet.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Controleur_Ethernet.tcl

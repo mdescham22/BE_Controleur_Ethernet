@@ -6,4 +6,4 @@
 # Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log Recepteur.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Recepteur.tcl
+vivado -log Controleur_Ethernet.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Controleur_Ethernet.tcl

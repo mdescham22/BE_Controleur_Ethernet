@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1669827556">
-  <File Type="PA-TCL" Name="Recepteur.tcl"/>
-  <File Type="REPORTS-TCL" Name="Recepteur_reports.tcl"/>
-  <File Type="RDS-RDS" Name="Recepteur.vds"/>
-  <File Type="RDS-DCP" Name="Recepteur.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="Recepteur_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="Recepteur_utilization_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1670591037">
+  <File Type="VDS-TIMING-PB" Name="Controleur_Ethernet_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Controleur_Ethernet_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="Controleur_Ethernet.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Controleur_Ethernet_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="Controleur_Ethernet_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Controleur_Ethernet_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="Controleur_Ethernet.vds"/>
+  <File Type="REPORTS-TCL" Name="Controleur_Ethernet_reports.tcl"/>
+  <File Type="PA-TCL" Name="Controleur_Ethernet.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Emetteur.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/Recepteur.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -16,14 +25,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Controleur_Ethernet.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Recepteur"/>
+      <Option Name="TopModule" Val="Controleur_Ethernet"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
