@@ -34,8 +34,8 @@ use UNISIM.VComponents.all;
 
 entity Controleur_Ethernet is
     
-    Port ( CLK : in STD_LOGIC;
-           RESET : in STD_LOGIC;
+    Port ( CLK10I : in STD_LOGIC;
+           RESETN : in STD_LOGIC;
            
            TABORTP : in STD_LOGIC;
            TAVAILP : in STD_LOGIC;
@@ -47,7 +47,7 @@ entity Controleur_Ethernet is
            TREADDP : out STD_LOGIC;
            TRNSMTP : out STD_LOGIC;
            TSTARTP : out STD_LOGIC;
-           
+           TSOCOLP  :   out STD_LOGIC;
            RBYTEP   :   out STD_LOGIC;
            RCLEANP  :   out STD_LOGIC;
            RCVNGP   :   out STD_LOGIC;
@@ -92,14 +92,16 @@ architecture struct of Controleur_Ethernet is
               TDATAO   :   out STD_LOGIC_VECTOR (7 downto 0));
     end component;
     
-   -- component Collision
-    --    port (cCLK     :  in STD_LOGIC;
-     --         cRESET   :  in STD_LOGIC;
-     --         cRCVNGP  :  in STD_LOGIC;
-     --         cTRNSMTP :  in STD_LOGIC;
-     --         cRENABP  :  out  STD_LOGIC;
-     --         cTABORTP :  out STD_LOGIC);
-   -- end component;
+   component Collision
+        Port ( CLK     :   in STD_LOGIC;
+              RESET    :   in STD_LOGIC; 
+              RCVNGP   :   in STD_LOGIC;
+              TRNSMTP  :   in STD_LOGIC;
+              
+              TSOCOLP  :   out STD_LOGIC;
+              RENABP   :   out STD_LOGIC;
+              TABORTP  :   out STD_LOGIC);
+    end component;
     
 for all:Emetteur use entity work.Emetteur(behavioral);
 for all:Recepteur use entity work.Recepteur(behavioral);
@@ -108,10 +110,13 @@ for all:Recepteur use entity work.Recepteur(behavioral);
     
 begin
 
-U1 : Emetteur port map(CLK,RESET,TABORTP,TAVAILP,TFINISHP,TLASTP,TDATAI,TREADDP,TRNSMTP,TSTARTP,TDONEP,TDATAO);
+U1 : Emetteur port map(CLK10I,RESETN,tabort,TAVAILP,TFINISHP,TLASTP,TDATAI,TREADDP,trnsmt,TSTARTP,TDONEP,TDATAO);
 
-U2 : Recepteur port map(CLK,RESET,RBYTEP,RCLEANP,RCVNGP,RDATAO,RDATAI,RDONEP,RENABP,RSTARTP,RSMATIP);
+U2 : Recepteur port map(CLK10I,RESETN,RBYTEP,RCLEANP,rcvng,RDATAO,RDATAI,RDONEP,RENABP,RSTARTP,RSMATIP);
 
---U3 : Collision port map(CLK,RESET,rcvng,trnsmt,renab,tabort);
+U3 : Collision port map(CLK10I,RESETN,rcvng,trnsmt,renab,tabort);
+
+TRNSMTP <= trnsmt;
+RCVNGP  <= rcvng;
 
 end struct;

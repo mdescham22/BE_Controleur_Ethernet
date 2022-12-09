@@ -30,6 +30,7 @@ set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_output_repo /home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
+  /home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Collision.vhd
   /home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Emetteur.vhd
   /home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Recepteur.vhd
   /home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Controleur_Ethernet.vhd

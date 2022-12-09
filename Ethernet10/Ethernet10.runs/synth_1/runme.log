@@ -14,23 +14,27 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5730 
+INFO: Helper process launched with PID 55987 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.270 ; gain = 83.828 ; free physical = 58081 ; free virtual = 69743
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.266 ; gain = 83.828 ; free physical = 56335 ; free virtual = 68737
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Controleur_Ethernet' [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Controleur_Ethernet.vhd:63]
-INFO: [Synth 8-3491] module 'Emetteur' declared at '/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Emetteur.vhd:35' bound to instance 'U1' of component 'Emetteur' [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Controleur_Ethernet.vhd:111]
+INFO: [Synth 8-3491] module 'Emetteur' declared at '/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Emetteur.vhd:35' bound to instance 'U1' of component 'Emetteur' [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Controleur_Ethernet.vhd:113]
 INFO: [Synth 8-638] synthesizing module 'Emetteur' [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Emetteur.vhd:50]
 INFO: [Synth 8-256] done synthesizing module 'Emetteur' (1#1) [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Emetteur.vhd:50]
-INFO: [Synth 8-3491] module 'Recepteur' declared at '/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Recepteur.vhd:35' bound to instance 'U2' of component 'Recepteur' [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Controleur_Ethernet.vhd:113]
+INFO: [Synth 8-3491] module 'Recepteur' declared at '/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Recepteur.vhd:35' bound to instance 'U2' of component 'Recepteur' [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Controleur_Ethernet.vhd:115]
 INFO: [Synth 8-638] synthesizing module 'Recepteur' [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Recepteur.vhd:49]
 INFO: [Synth 8-256] done synthesizing module 'Recepteur' (2#1) [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Recepteur.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'Controleur_Ethernet' (3#1) [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Controleur_Ethernet.vhd:63]
+INFO: [Synth 8-3491] module 'Collision' declared at '/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Collision.vhd:34' bound to instance 'U3' of component 'Collision' [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Controleur_Ethernet.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'Collision' [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Collision.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'Collision' (3#1) [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Collision.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'Controleur_Ethernet' (4#1) [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Controleur_Ethernet.vhd:63]
+WARNING: [Synth 8-3331] design Controleur_Ethernet has unconnected port TABORTP
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1299.895 ; gain = 128.453 ; free physical = 58081 ; free virtual = 69743
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1299.891 ; gain = 128.453 ; free physical = 56337 ; free virtual = 68739
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1299.895 ; gain = 128.453 ; free physical = 58081 ; free virtual = 69743
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1299.891 ; gain = 128.453 ; free physical = 56336 ; free virtual = 68738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -38,7 +42,7 @@ Start Loading Part and Timing Information
 Loading part: xc7a35tcpg236-1
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1307.898 ; gain = 136.457 ; free physical = 58080 ; free virtual = 69742
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1307.895 ; gain = 136.457 ; free physical = 56335 ; free virtual = 68737
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "cpt_etape" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cpt_etape" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -46,8 +50,12 @@ INFO: [Synth 8-5544] ROM "cpt_trame" won't be mapped to Block RAM because addres
 INFO: [Synth 8-5544] ROM "cpt_trame" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cpt_etape" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "RSMATIP" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'RENABP_reg' into 'AUX_TSOCOLP_reg' [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Collision.vhd:60]
+INFO: [Synth 8-4471] merging register 'TABORTP_reg' into 'AUX_TSOCOLP_reg' [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Collision.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element RENABP_reg was removed.  [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Collision.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element TABORTP_reg was removed.  [/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Collision.vhd:61]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1315.906 ; gain = 144.465 ; free physical = 58061 ; free virtual = 69725
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1315.902 ; gain = 144.465 ; free physical = 56325 ; free virtual = 68727
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -66,7 +74,7 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 2     
 	                3 Bit    Registers := 5     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 10    
+	                1 Bit    Registers := 11    
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 6     
 	   6 Input      3 Bit        Muxes := 2     
@@ -110,6 +118,10 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 12    
+Module Collision 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -127,8 +139,9 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design Controleur_Ethernet has unconnected port TABORTP
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.023 ; gain = 263.582 ; free physical = 57884 ; free virtual = 69568
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 1435.020 ; gain = 263.582 ; free physical = 56167 ; free virtual = 68571
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -141,7 +154,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.023 ; gain = 263.582 ; free physical = 57884 ; free virtual = 69568
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.020 ; gain = 263.582 ; free physical = 56167 ; free virtual = 68571
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -153,7 +166,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.023 ; gain = 263.582 ; free physical = 57882 ; free virtual = 69566
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.020 ; gain = 263.582 ; free physical = 56167 ; free virtual = 68571
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -177,7 +190,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.023 ; gain = 263.582 ; free physical = 57879 ; free virtual = 69566
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.020 ; gain = 263.582 ; free physical = 56166 ; free virtual = 68569
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -190,7 +203,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.023 ; gain = 263.582 ; free physical = 57879 ; free virtual = 69566
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.020 ; gain = 263.582 ; free physical = 56166 ; free virtual = 68569
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -202,25 +215,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.023 ; gain = 263.582 ; free physical = 57879 ; free virtual = 69566
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.020 ; gain = 263.582 ; free physical = 56166 ; free virtual = 68569
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.023 ; gain = 263.582 ; free physical = 57879 ; free virtual = 69566
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.020 ; gain = 263.582 ; free physical = 56166 ; free virtual = 68569
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.023 ; gain = 263.582 ; free physical = 57879 ; free virtual = 69566
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.020 ; gain = 263.582 ; free physical = 56166 ; free virtual = 68569
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.023 ; gain = 263.582 ; free physical = 57879 ; free virtual = 69566
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.020 ; gain = 263.582 ; free physical = 56166 ; free virtual = 68569
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -238,13 +251,13 @@ Report Cell Usage:
 +------+-----+------+
 |1     |BUFG |     1|
 |2     |LUT2 |    10|
-|3     |LUT3 |    11|
+|3     |LUT3 |    10|
 |4     |LUT4 |    12|
-|5     |LUT5 |    15|
-|6     |LUT6 |    35|
-|7     |FDRE |    41|
+|5     |LUT5 |    16|
+|6     |LUT6 |    36|
+|7     |FDRE |    42|
 |8     |FDSE |     2|
-|9     |IBUF |    23|
+|9     |IBUF |    22|
 |10    |OBUF |    26|
 +------+-----+------+
 
@@ -252,18 +265,19 @@ Report Instance Areas:
 +------+---------+----------+------+
 |      |Instance |Module    |Cells |
 +------+---------+----------+------+
-|1     |top      |          |   176|
-|2     |  U1     |Emetteur  |    70|
+|1     |top      |          |   177|
+|2     |  U1     |Emetteur  |    69|
 |3     |  U2     |Recepteur |    56|
+|4     |  U3     |Collision |     3|
 +------+---------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.023 ; gain = 263.582 ; free physical = 57879 ; free virtual = 69566
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.020 ; gain = 263.582 ; free physical = 56166 ; free virtual = 68569
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.023 ; gain = 263.582 ; free physical = 57889 ; free virtual = 69576
-Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.031 ; gain = 263.582 ; free physical = 57890 ; free virtual = 69577
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.020 ; gain = 263.582 ; free physical = 56176 ; free virtual = 68579
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1435.027 ; gain = 263.582 ; free physical = 56179 ; free virtual = 68582
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -271,11 +285,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+28 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1566.051 ; gain = 406.234 ; free physical = 57816 ; free virtual = 69527
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1566.047 ; gain = 406.234 ; free physical = 56135 ; free virtual = 68538
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.runs/synth_1/Controleur_Ethernet.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Controleur_Ethernet_utilization_synth.rpt -pb Controleur_Ethernet_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1590.062 ; gain = 0.000 ; free physical = 57814 ; free virtual = 69525
-INFO: [Common 17-206] Exiting Vivado at Fri Dec  9 14:04:25 2022...
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1590.059 ; gain = 0.000 ; free physical = 56132 ; free virtual = 68535
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  9 15:20:26 2022...
