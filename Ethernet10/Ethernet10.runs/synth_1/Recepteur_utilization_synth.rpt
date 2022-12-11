@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Wed Nov 30 17:59:46 2022
-| Host         : insa-10226 running 64-bit Ubuntu 20.04.5 LTS
+| Date         : Fri Dec  9 15:00:17 2022
+| Host         : insa-11275 running 64-bit Ubuntu 20.04.5 LTS
 | Command      : report_utilization -file Recepteur_utilization_synth.rpt -pb Recepteur_utilization_synth.pb
 | Design       : Recepteur
 | Device       : 7a35tcpg236-1
@@ -152,10 +152,10 @@ Table of Contents
 | FDRE     |   20 |        Flop & Latch |
 | OBUF     |   14 |                  IO |
 | IBUF     |   11 |                  IO |
-| LUT5     |   10 |                 LUT |
-| LUT6     |    9 |                 LUT |
-| LUT4     |    5 |                 LUT |
-| LUT3     |    5 |                 LUT |
+| LUT6     |   10 |                 LUT |
+| LUT5     |    9 |                 LUT |
+| LUT4     |    9 |                 LUT |
+| LUT3     |    3 |                 LUT |
 | LUT2     |    3 |                 LUT |
 | FDSE     |    2 |        Flop & Latch |
 | BUFG     |    1 |               Clock |

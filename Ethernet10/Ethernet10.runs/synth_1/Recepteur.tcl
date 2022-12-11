@@ -22,14 +22,14 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/mdescham/Documents/BE_Controleur_Ethernet/Ethernet10/Ethernet10.cache/wt [current_project]
-set_property parent.project_path /home/mdescham/Documents/BE_Controleur_Ethernet/Ethernet10/Ethernet10.xpr [current_project]
+set_property webtalk.parent_dir /home/acosta/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.cache/wt [current_project]
+set_property parent.project_path /home/acosta/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo /home/mdescham/Documents/BE_Controleur_Ethernet/Ethernet10/Ethernet10.cache/ip [current_project]
+set_property ip_output_repo /home/acosta/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib /home/mdescham/Documents/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Recepteur.vhd
+read_vhdl -library xil_defaultlib /home/acosta/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sources_1/new/Recepteur.vhd
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1669827556">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1670594390">
   <File Type="PA-TCL" Name="Recepteur.tcl"/>
   <File Type="REPORTS-TCL" Name="Recepteur_reports.tcl"/>
   <File Type="RDS-RDS" Name="Recepteur.vds"/>
@@ -15,6 +15,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Controleur_Ethernet.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Emetteur.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

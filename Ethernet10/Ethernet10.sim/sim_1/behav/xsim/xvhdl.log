@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdescham/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sim_1/new/TestRecepteur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/acosta/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.srcs/sim_1/new/TestRecepteur.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity TestRecepteur

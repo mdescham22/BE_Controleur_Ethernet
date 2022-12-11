@@ -69,6 +69,8 @@ signal TDATAO : std_logic_vector(7 downto 0);
 
 --Clock period
 constant CLK_period : time := 100 ns;
+--Compteur Test
+signal cpt_test: integer range 5 downto 0      := 0;
 
 begin
 
@@ -94,16 +96,35 @@ end process;
 
 stim_proc :process
 begin
-    RESET <= '1', '0' after 10 ns, '1' after 20 ns;
-    TAVAILP <='0', '1' after 30 ns, '0' after 40 ns;
+    cpt_test <= 0, 1 after 15000 ns;
+    if (cpt_test = 0) then                  --test quand on envoit une trame nomrale
+        RESET <= '1', '0' after 100 ns, '1' after 200 ns;
+        TAVAILP <='0', '1' after 300 ns, '0' after 400 ns;
         
-    TDATAI <= X"F3", X"35" after 200 ns, X"D3" after 280 ns, 
-    X"29" after 360 ns, X"A6" after 440 ns, X"12" after 520 ns, X"0" after 600ns,
-    X"35" after 1080 ns, X"D3" after 1160 ns, 
-    X"29" after 1240 ns, X"A6" after 1320 ns, X"12" after 1400 ns, X"0" after 1480ns;
+        TDATAI <= X"F3", X"35" after 2000 ns, X"D3" after 2800 ns, 
+        X"29" after 3600 ns, X"A6" after 4400 ns, X"12" after 5200 ns, X"0" after 6000ns,
+        X"35" after 10800 ns, X"D3" after 11600 ns, 
+        X"29" after 12400 ns, X"A6" after 13200 ns, X"12" after 14000 ns, X"0" after 14800ns;
     
-    TLASTP <= '0', '1' after 1480 ns, '0' after 1490 ns;
-    TFINISHP <= '0';
+        TLASTP <= '0', '1' after 14800 ns, '0' after 14900 ns;
+        TFINISHP <= '0';
+        TABORTP <= '0'; 
+     
+     elsif (cpt_test=1) then                --test quand on rejette par une collision
+        RESET <= '1', '0' after 100 ns, '1' after 200 ns;
+        TAVAILP <='0', '1' after 300 ns, '0' after 400 ns;
+             
+        TDATAI <= X"F3", X"35" after 2000 ns, X"D3" after 2800 ns, 
+        X"29" after 3600 ns, X"A6" after 4400 ns, X"12" after 5200 ns, X"0" after 6000ns,
+        X"35" after 10800 ns, X"D3" after 11600 ns, 
+        X"29" after 12400 ns, X"A6" after 13200 ns, X"12" after 14000 ns, X"0" after 14800ns;
+         
+        TLASTP <= '0', '1' after 14800 ns, '0' after 14900 ns;
+        TFINISHP <= '0';
+        TABORTP <= '0', '1' after 3600ns, '0' after 3700 ns; 
+        
+     
+     end if;
     wait;
 end process;
 

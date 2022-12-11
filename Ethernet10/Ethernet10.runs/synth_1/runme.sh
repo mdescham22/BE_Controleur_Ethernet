@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/mdescham/Documents/BE_Controleur_Ethernet/Ethernet10/Ethernet10.runs/synth_1'
+HD_PWD='/home/acosta/Bureau/BE_Controleur_Ethernet/Ethernet10/Ethernet10.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

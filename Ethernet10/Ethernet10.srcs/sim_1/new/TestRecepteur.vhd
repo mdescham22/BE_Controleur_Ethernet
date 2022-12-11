@@ -67,7 +67,8 @@ signal RDATAO : std_logic_vector(7 downto 0);
 
 --Clock period
 constant CLK_period : time := 100 ns;
-
+--Compteur test
+signal cpt_test: integer range 5 downto 0      := 0;
 begin
 
 uut : Recepteur PORT MAP (
@@ -92,19 +93,46 @@ end process;
 
 stim_proc :process
 begin
-    RESET <= '1', '0' after 100 ns, '1' after 200 ns;
-    RENABP <= '0', '1' after 500 ns, '0' after 600 ns;
+    cpt_test <= 0, 1 after 15000 ns, 2 after 30000 ns;   
+    if (cpt_test = 0) then                                      --Test quand on recoit un paquet normal
+        RESET <= '1', '0' after 100 ns, '1' after 200 ns;
+        RENABP <= '0', '1' after 500 ns;
     
-    RDATAI <= "10101011",   --SFD 
+        RDATAI <= "10101011",   --SFD 
     
-    X"AB" after 600 ns, X"CD" after 1400 ns, X"EF" after 2200 ns,   --@dest 
-    X"10" after 3000 ns, X"23" after 3800 ns, X"97" after 4600 ns,
+        X"AB" after 600 ns, X"CD" after 1400 ns, X"EF" after 2200 ns,   --@dest 
+        X"10" after 3000 ns, X"23" after 3800 ns, X"97" after 4600 ns,
     
-    X"AB" after 5400 ns, X"CD" after 6200 ns, X"EF" after 7000 ns,   --@source
-    X"10" after 7800 ns, X"23" after 8600 ns, X"23" after 9400 ns,
+        X"AB" after 5400 ns, X"CD" after 6200 ns, X"EF" after 7000 ns,   --@source
+        X"10" after 7800 ns, X"23" after 8600 ns, X"23" after 9400 ns,
+        X"10" after 10200 ns,X"56" after 11000 ns,
     
-    "01010100" after 12000 ns;   --EFD 
+        "01010100" after 12000 ns;   --EFD 
+    elsif(cpt_test=1) then                                              --Test lors adresse destination est fausse
+        RESET <= '0' after 15100 ns, '1' after 15200 ns;
+        RENABP <= '0' after 15000 ns, '1' after 15500 ns;
+        
+        RDATAI <= "10101011",   --SFD 
+        
+        X"AB" after 15600 ns, X"CD" after 16400 ns, X"EF" after 17200 ns,   --@dest 
+        X"10" after 18000 ns, X"23" after 18800 ns, X"23" after 19600 ns,
+        
+        X"AB" after 20400 ns, X"CD" after 21200 ns, X"EF" after 22000 ns,   --@source
+        X"10" after 22800 ns, X"23" after 23600 ns, X"23" after 24400 ns,
+        
+        "01010100" after 27000 ns;   --EFD 
+     
+     elsif(cpt_test=2) then                                             --Test lors d'une collision
+        RESET <= '1', '0' after 100 ns, '1' after 200 ns;
+        RENABP <= '0', '1' after 500 ns, '0' after 3800 ns ;
+         
+        RDATAI <= "10101011",   --SFD 
+         
+        X"AB" after 600 ns, X"CD" after 1400 ns, X"EF" after 2200 ns,   --@dest 
+        X"10" after 3000 ns, X"23" after 3800 ns, X"97" after 4600 ns,
+        X"AB" after 5400 ns, X"CD" after 6200 ns;   --EFD ç
     
+    end if;
     wait;
 end process;
 
