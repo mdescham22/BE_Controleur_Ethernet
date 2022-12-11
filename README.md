@@ -21,15 +21,21 @@ Le détecteur de collision a pour but d’identifier une collision, c'est-à-dir
 
 ## Réalisation du controleur Ethernet-10 Core
 
+![This is an image](https://github.com/mdescham22/BE_Controleur_Ethernet/blob/main/image_readme/f2.PNG)
+
 ### Emetteur
 
-Pour gagner en temps de programmation nous avons dans un premier temps construit un logigramme relatant des différents cas dans lequel l'émetteur pouvait ce trouver (figure ci-dessous). 
+Pour gagner en temps de programmation nous avons dans un premier temps construit un logigramme relatant des différents cas dans lequel l'émetteur pouvait ce trouver (figure ci-dessous).
+
+![This is an image](https://github.com/mdescham22/BE_Controleur_Ethernet/blob/main/image_readme/f3.PNG)
 
 Après avoir valider notre logigramme nous avons commencé à écrire le code VHDL pour finir par la simulation.
 
 ### Récepteur
 
 De la même façon, nous avons commencé cette partie par un logigramme (ci-dessous).
+
+![This is an image](https://github.com/mdescham22/BE_Controleur_Ethernet/blob/main/image_readme/f4.PNG)
 
 ### Collision
 
