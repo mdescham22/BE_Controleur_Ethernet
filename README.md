@@ -5,7 +5,7 @@
 
 Le contrôleur Ethernet est utilisé pour la communication entre plusieurs appareils distants. 
 Dans le modèle OSI, Il est situé dans la couche MAC de la partie Liaison de données. 
-Son rôle est ainsi d’attribuer à appareil une adresse physique sur le réseau pour ainsi différencier les appareils et donc communiquer.
+Son rôle est ainsi d’attribuer à l'appareil une adresse physique sur le réseau pour qu'il puisse communiquer.
 
 Lors de notre recherche, nous avons pu identifier 3 entités majeures de "Contrôleur Ethernet”: Emetteur, Récepteur, Détecteur de collision. Chaque entité est définie par des signaux d’entrée et de sortie. 
 
