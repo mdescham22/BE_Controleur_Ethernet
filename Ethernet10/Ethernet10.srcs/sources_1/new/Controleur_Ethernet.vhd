@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Students: Maxime DESCHAMPS, Aishya COSTA 
 -- 
 -- Create Date: 09.11.2022 17:19:03
 -- Design Name: 
@@ -110,13 +110,13 @@ for all:Recepteur use entity work.Recepteur(behavioral);
     
 begin
 
-U1 : Emetteur port map(CLK10I,RESETN,tabort,TAVAILP,TFINISHP,TLASTP,TDATAI,TREADDP,trnsmt,TSTARTP,TDONEP,TDATAO);
+U1 : Emetteur port map(CLK10I,RESETN,TABORTP,TAVAILP,TFINISHP,TLASTP,TDATAI,TREADDP,trnsmt,TSTARTP,TDONEP,TDATAO);
 
-U2 : Recepteur port map(CLK10I,RESETN,RBYTEP,RCLEANP,rcvng,RDATAO,RDATAI,RDONEP,RENABP,RSTARTP,RSMATIP);
+U2 : Recepteur port map(CLK10I,RESETN,RBYTEP,RCLEANP,RCVNGP,RDATAO,RDATAI,RDONEP,RENABP,RSTARTP,RSMATIP);
 
-U3 : Collision port map(CLK10I,RESETN,rcvng,trnsmt,renab,tabort);
+-- U3 : Collision port map(CLK10I,RESETN,rcvng,trnsmt,renab,tabort); collision rencontre un "critical warning"
 
-TRNSMTP <= trnsmt;
-RCVNGP  <= rcvng;
+-- TRNSMTP <= trnsmt;
+-- RCVNGP  <= rcvng;
 
 end struct;
