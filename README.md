@@ -31,7 +31,7 @@ Pour gagner en temps de programmation nous avons dans un premier temps construit
 ![This is an image](https://github.com/mdescham22/BE_Controleur_Ethernet/blob/main/image_readme/f3.PNG)
 <sub>Logigramme de l'émetteur</sub>
 
-Après avoir valider notre logigramme nous avons commencé à écrire le code VHDL pour finir par la simulation.
+Après avoir validé notre logigramme nous avons commencé à écrire le code VHDL pour finir par la simulation.
 
 ### Récepteur
 
@@ -41,12 +41,12 @@ De la même façon, nous avons commencé cette partie par un logigramme (ci-dess
 <sub>Logigramme de l'émetteur</sub>
 ### Collision
 
-La collision possédant moins de registre, nous nous sommes passés de la convention adoptée plus tôt. Nous avons écrit le code VHDL et la simulation sans l’aide de logigramme.
+La collision possédant moins de registre, nous nous sommes passés de la convention adoptée plus tôt. Nous avons écrit le code VHDL et mais la simulation reste à faire.
 
 ### Réunion des Parties
 
-Une fois toutes les parties opérationnelles, nous avons décidé de les joindre dans une structure globale.
+Une fois toutes les parties opérationnelles, nous avons décidé de les joindre dans une structure globale, cependant nous avons observé tardivement des "criticals warning" en synthèse ce qui nous a contraint à mettre en commentaire la partie collision.
 
 ## Améliorations
 
-Il nous reste encore à faire l'implémentation matériel, fixer une taille des données et gérérer la retransmission de trame.
+Il nous reste encore à ajouter la partie collision, faire l'implémentation matériel, fixer une taille des données et gérer la retransmission de trame.
